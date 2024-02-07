@@ -8,7 +8,7 @@ import categoryRoute from './routes/categoryRoute.js'
 import productRoutes from './routes/productRoutes.js'
 import cors from 'cors'
 import path from 'path'
-
+import {fileURLToPath} from 'url'
 const app = express();
 //.env
 dotenv.config();
@@ -16,7 +16,9 @@ dotenv.config();
 //DB config
 connectDB();
 
-
+//esmodule fix 
+const __filename = fileURLToPath(import.meat.url);
+const __dirname = path.direname(__filename);
 //Middlewares\
 app.use(cors())
 app.use(express.json())
