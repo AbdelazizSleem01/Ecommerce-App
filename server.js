@@ -17,7 +17,7 @@ dotenv.config();
 connectDB();
 
 //esmodule fix 
-const __filename = fileURLToPath(import.meat.url);
+const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 //Middlewares\
 app.use(cors())
