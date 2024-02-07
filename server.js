@@ -18,7 +18,7 @@ connectDB();
 
 //esmodule fix 
 const __filename = fileURLToPath(import.meat.url);
-const __dirname = path.direname(__filename);
+const __dirname = path.dirname(__filename);
 //Middlewares\
 app.use(cors())
 app.use(express.json())
